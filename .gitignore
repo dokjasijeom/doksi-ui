@@ -43,3 +43,5 @@ jspm_packages/
 
 # Thumbnails
 Thumbs.db
+
+*.tgz

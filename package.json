@@ -1,19 +1,32 @@
 {
-  "name": "doksi-ui",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "@dokjasijeom/doksi-ui",
+  "description": "doksi ui library",
+  "version": "0.0.1",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "private": false,
   "scripts": {
     "dev": "vite",
     "build": "rollup -c",
-    "build:types": "tsc"
+    "build:types": "tsc",
+    "prepare": "rm -rf dist && tsc && vite build",
+    "clean:package": "npm uninstall dokjasijeom-doksi-ui-0.0.1 && npm cache clean --force && rm -rf ./dokjasijeom-doksi-ui-0.0.1.tgz",
+    "add:package": "npm install ./dokjasijeom-doksi-ui-0.0.1.tgz"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dokjasijeom/doksi-ui.git"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
+    "@dokjasijeom/doksi-ui": "file:dokjasijeom-doksi-ui-0.0.1.tgz",
+    "@types/styled-components": "^5.1.34",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "styled-components": "^6.1.13"
   },
   "devDependencies": {
     "@rollup/plugin-babel": "^6.0.4",
@@ -27,6 +40,11 @@
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-terser": "^7.0.2",
     "typescript": "^5.6.2",
-    "vite": "^5.4.8"
-  }
+    "vite": "^5.4.8",
+    "vite-plugin-dts": "^4.2.3"
+  },
+  "bugs": {
+    "url": "https://github.com/dokjasijeom/doksi-ui/issues"
+  },
+  "homepage": "https://github.com/dokjasijeom/doksi-ui#readme"
 }
