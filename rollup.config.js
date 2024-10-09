@@ -8,7 +8,7 @@ import { terser } from "rollup-plugin-terser";
 const packageJson = require("./package.json");
 
 export default {
-  input: "src/index.ts", // TypeScript의 진입점
+  input: "src/index.tsx", // TypeScript의 진입점
   output: [
     {
       file: packageJson.main,

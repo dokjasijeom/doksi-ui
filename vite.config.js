@@ -6,7 +6,7 @@ import * as path from "path";
 export default defineConfig({
   build: {
     lib: {
-      entry: path.resolve(__dirname, "src/index.ts"),
+      entry: path.resolve(__dirname, "src/index.tsx"),
       name: "doksi-ui",
       formats: ["es", "cjs"],
       fileName: (format) => `index.${format}.js`,
@@ -16,6 +16,7 @@ export default defineConfig({
       globals: {
         react: "React",
         "react-dom": "ReactDOM",
+        "styled-components": "styled",
       },
       banner: "use client",
       interop: "auto",

@@ -1,7 +1,7 @@
 {
   "name": "doksi-ui-test",
   "description": "doksi ui library",
-  "version": "0.0.5",
+  "version": "0.0.7",
   "main": "dist/index.cjs.js",
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
@@ -9,7 +9,8 @@
     ".": {
       "module": "./dist/index.es.js",
       "import": "./dist/index.es.js",
-      "default": "./dist/index.cjs.js"
+      "default": "./dist/index.cjs.js",
+      "types": "./dist/index.d.ts"
     }
   },
   "private": false,
@@ -18,8 +19,8 @@
     "build": "rollup -c",
     "build:types": "tsc",
     "prepare": "rm -rf dist && tsc && vite build",
-    "clean:package": "npm uninstall doksi-ui-test && npm cache clean --force && rm -rf ./doksi-ui-test-0.0.4.tgz",
-    "add:package": "npm install ./doksi-ui-test-0.0.4.tgz"
+    "clean:package": "npm uninstall doksi-ui-test && npm cache clean --force && rm -rf ./doksi-ui-test-0.0.5.tgz",
+    "add:package": "npm install ./doksi-ui-test-0.0.5.tgz"
   },
   "repository": {
     "type": "git",
