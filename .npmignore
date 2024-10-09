@@ -2,7 +2,7 @@ index.html
 /src
 tsconfig.json
 tsconfig.node.json
-vite.config.ts
+vite.config.js
 .eslintrc.cjs
 package-lock.json
 node_modules
