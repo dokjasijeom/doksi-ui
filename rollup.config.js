@@ -1,9 +1,11 @@
 import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import babel from "@rollup/plugin-babel";
+import svgr from "@svgr/rollup";
 import typescript from "@rollup/plugin-typescript";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import { terser } from "rollup-plugin-terser";
+import copy from "rollup-plugin-copy";
 
 const packageJson = require("./package.json");
 
@@ -22,6 +24,15 @@ export default {
     },
   ],
   plugins: [
+    copy({
+      targets: [
+        {
+          src: "src/components/Icons/icons/*.svg",
+          dest: "dist/components/Icons/icons",
+        },
+      ],
+    }),
+    svgr(),
     peerDepsExternal(), // peerDependencies를 번들에서 제외
     resolve(), // node_modules에서 모듈 로드
     commonjs(), // CommonJS 모듈 변환
