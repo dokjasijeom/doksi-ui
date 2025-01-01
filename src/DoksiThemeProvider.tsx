@@ -1,11 +1,17 @@
-import { ReactNode } from "react";
-import { ThemeProvider } from "styled-components";
-import { doksiTheme } from "./styles/theme";
+import { ReactNode } from 'react'
+import { ThemeProvider } from 'styled-components'
+import { doksiTheme } from './styles/theme'
+import GlobalStyle from './styles/GlobalStyle'
 
 type DoksiThemeProviderProps = {
-  children: ReactNode;
-};
+  children: ReactNode
+}
 
 export const DoksiThemeProvider = ({ children }: DoksiThemeProviderProps) => {
-  return <ThemeProvider theme={doksiTheme}>{children}</ThemeProvider>;
-};
+  return (
+    <ThemeProvider theme={doksiTheme}>
+      <GlobalStyle />
+      {children}
+    </ThemeProvider>
+  )
+}
