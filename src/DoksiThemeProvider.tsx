@@ -1,7 +1,7 @@
 import { ReactNode } from 'react'
 import { ThemeProvider } from 'styled-components'
 import { doksiTheme } from './styles/theme'
-import GlobalStyle from './styles/GlobalStyle'
+import DoksiGlobalStyle from './styles/DoksiGlobalStyle'
 
 type DoksiThemeProviderProps = {
   children: ReactNode
@@ -10,7 +10,7 @@ type DoksiThemeProviderProps = {
 export const DoksiThemeProvider = ({ children }: DoksiThemeProviderProps) => {
   return (
     <ThemeProvider theme={doksiTheme}>
-      <GlobalStyle />
+      <DoksiGlobalStyle />
       {children}
     </ThemeProvider>
   )
