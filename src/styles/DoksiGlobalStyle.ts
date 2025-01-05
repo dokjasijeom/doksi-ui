@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components'
 import reset from 'styled-reset'
 
-const GlobalStyle = createGlobalStyle`
+const DoksiGlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;700&display=swap');
 
   ${reset}
@@ -28,4 +28,4 @@ const GlobalStyle = createGlobalStyle`
 
 `
 
-export default GlobalStyle
+export default DoksiGlobalStyle
